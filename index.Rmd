@@ -23,6 +23,6 @@ I've divided this book into two parts:
 
 **List of Companies**, which have demonstrated good financial health and positive profitability (once again I reiterate: this book does not work with company recommendations).
 
-If you want to contribute with the project, you can modify and/or improve the source code of the book in [Github](https://github.com/JoaoMontanher/Finheim-Main-Book). Also, you can share and discuss ideas for the project in our [Reddit](https://www.reddit.com/r/Finheim/) group.
+If you want to contribute with the project, you can modify and/or improve the source code of the book in [Github](https://github.com/JoaoMontanher/Finheim-Book). Also, you can share and discuss ideas for the project in our [Reddit](https://www.reddit.com/r/Finheim/) group.
 
 Another thing: When I say "Long-term investment", I mean holding a company in your portfolio for years, not trading methods that promise miraculous high returns in the short term.

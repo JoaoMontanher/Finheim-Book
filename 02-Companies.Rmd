@@ -1,0 +1,38 @@
+# Companies
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+library(pander)
+Companies <- read.csv("Companies.csv")
+source("MacroSpell2.R")
+
+for(Row in 1:nrow(Companies)){
+  tryCatch({
+  C1 <- Company$new(Companies$Ticker[Row],addZeros(Companies$CIK[Row]))
+  
+  C1$final$Ticker <-Companies$Ticker[Row]
+  
+   cat("## ",Companies$Ticker[Row],"\n\n")
+   
+   cat(Companies$Description[Row],"\n\n")
+
+   final <- na.omit(data.frame(C1$IRRs$IRRfinalDates,C1$IRRs$IRR))
+   C1$getPlotLine(x=final[,1],y=final[,2],color="dark blue",title = paste("Annual IRR",C1$yearsInvesting),metric="%")
+   cat('\n')
+  
+   final <- na.omit(data.frame(C1$final$year,C1$final$NetIncomeLoss))
+   C1$getPlot(x=final[,1],y=final[,2],color="dark green",title = "Annual Net Income\\Loss",metric=Companies$Unit[Row],text=TRUE)
+   cat('\n')
+  
+   final <- na.omit(data.frame(C1$final$year,C1$final$ResearchAndDevelopmentExpense))
+   C1$getPlot(x=final[,1],y=final[,2],color="purple",title = "Annual R&D \"Expenses\"",metric=Companies$Unit[Row],text=TRUE)
+   cat('\n')
+  
+   final <- na.omit(data.frame(C1$final$year,C1$final$EquityOverAssets))
+   C1$getPlot(x=final[,1],y=final[,2],color="dark blue",title = "Annual Equity Ratio",metric="%",text=TRUE)
+   cat('\n')
+  
+   final <- na.omit(data.frame(C1$final$year,C1$final$Liquidity))
+   C1$getPlot(x=final[,1],y=final[,2],color="dark green",title = "Annual Current Ratio",metric="Unit",text=TRUE)
+   cat('\n\n')
+  },error=function(e){})}
+```

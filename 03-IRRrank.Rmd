@@ -1,0 +1,8 @@
+# IRR Rank
+
+```{r echo=FALSE}
+Companies <- read.csv("Companies.csv")
+colnames(Companies)[c(1,3,5)] <- c("Ticker","Company","Actual IRR (%)")
+Companies$`Actual IRR (%)`<-round(Companies$`Actual IRR`,2)
+knitr::kable(Companies[,c(1,3,5)])
+```

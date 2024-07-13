@@ -1,3 +1,5 @@
+https://joaomontanher.github.io/Finheim-Book/
+
 This book has been written, coded and compiled with the aim of making life easier for the long-term stock investor, as it is easy to get lost in the vast amount of data that countless companies listed on the stock exchanges generate.
 
 Given this problem, I decided to explore the daily stock prices and fundamental data of companies with the aim of looking for profitable and financially healthy companies (although nothing written in this book is an investment recommendation).
